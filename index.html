@@ -735,10 +735,8 @@
                 '<div>Введите номер опции или название команды и нажмите ENTER:</div>',
                 '<div style="margin: 5px 0 0 0; color: #618c6e;">  1. SNAKE       - Запуск симуляции "Змейка"</div>',
                 '<div style="margin: 0; color: #618c6e;">  2. VIDEO-1     - Открыть Медиа-архив (Файл 1 | Гимн ЛОР)</div>',
-                '<div style="margin: 0; color: #618c6e;">  3. VIDEO-2     - Открыть Медиа-архив (Файл 2)</div>',
-				'<div style="margin: 0; color: #618c6e;">  4. VIDEO-3     - Открыть Медиа-архив (Файл 3 | Секретные учения гвардии Иркутска)</div>',
-                '<div style="margin: 0; color: #618c6e;">  5. SECRET      - Закрытый сектор данных</div>',
-                '<div style="margin: 0 0 5px 0; color: #618c6e;">  6. YSTAV       - Инициализировать Воинский Устав</div>'
+                '<div style="margin: 0; color: #618c6e;"> 3. SECRET      - Закрытый сектор данных</div>',
+                '<div style="margin: 0 0 5px 0; color: #618c6e;">  4. YSTAV       - Инициализировать Воинский Устав</div>'
             ];
             
             let currentLine = 0;
@@ -815,19 +813,19 @@
                 playSynthSound(440, 'sine', 0.1, 0.05);
                 startVideoPlayer('video.mp4');
             } 
-            else if (cmd === '3' || cmd === 'video-2' || cmd === 'video2') {
+            else if (cmd === '5' || cmd === 'video-2' || cmd === 'video2') {
                 playSynthSound(440, 'sine', 0.1, 0.05);
                 startVideoPlayer('video2.mp4');
             }
-			else if (cmd === '4' || cmd === 'video-3' || cmd === 'video3') {
+			else if (cmd === '6' || cmd === 'video-3' || cmd === 'video3') {
                 playSynthSound(440, 'sine', 0.1, 0.05);
                 startVideoPlayer('video3.mov');
 			}
-            else if (cmd === '5' || cmd === 'secret') {
+            else if (cmd === '3' || cmd === 'secret') {
                 playSynthSound(100, 'sawtooth', 0.4, 0.1);
                 history.innerHTML += `<div style="color: #ff3333; font-weight: bold;">[ERROR] КРИТИЧЕСКАЯ ОШИБКА: Доступ отсутствует.</div>`;
             } 
-            else if (cmd === '6' || cmd === 'ystav') {
+            else if (cmd === '4' || cmd === 'ystav') {
                 playSynthSound(880, 'sine', 0.1, 0.05);
                 history.innerHTML += `<div style="color: #00ff66;">[SUCCESS] Команда принята. Запуск ядра...</div><br>`;
                 
